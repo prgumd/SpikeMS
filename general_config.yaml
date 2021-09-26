@@ -1,0 +1,32 @@
+# For more descriptions, look at 'config/config.py'.
+spikeConversion:
+  intensity: 128
+simulation:
+  Ts: 1 # Time-discretization in seconds
+  tSample: 100  # Number of simulation steps
+  tStartLoss: 50 # Start computing loss at this time-step
+data:
+  height: 260
+  width: 346
+  height_c: 128
+  width_c: 128
+  k: 1 #number of event indexes to use
+  minEvents: 30 
+  start: 5 # some datasets start numbering mask images with an index other than 1
+  timePerMask: 0.001000000
+batchsize: 8 #8
+hardware:
+  readerThreads: 8
+  gpuDevice: 0
+model:
+  dtype:
+  testSplit: 0.1
+neuron:
+  type: SRMALPHA
+  theta:  0.22
+  tauSr:  2.0
+  tauRef: 1.0
+  scaleRef: 2     # relative to theta
+  tauRho: 1     # relative to theta
+  scaleRho: 0.20
+ 

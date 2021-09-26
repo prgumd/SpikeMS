@@ -1,0 +1,33 @@
+# For short descriptions, look at 'config/config.py'.
+spikeConversion:
+  intensity: 128
+simulation:
+  Ts: 1
+  tSample: 100
+  tStartLoss: 50
+data:
+  height: 260
+  width: 346
+  k: 3 #number of event indexes to use
+batchsize: 8 #8
+hardware:
+  readerThreads: 8
+  gpuDevice: 0
+model:
+  dtype:
+neuron:
+  # type:     SRMALPHA
+  # theta:    10
+  # tauSr:    10.0
+  # tauRef:   1.0
+  # scaleRef: 2     # relative to theta
+  # tauRho:   1     # relative to theta #0.43429448190325176
+  # scaleRho: 1
+  type: SRMALPHA
+  theta:  0.22
+  tauSr:  2.0
+  tauRef: 1.0
+  scaleRef: 2     # relative to theta
+  tauRho: 1     # relative to theta #0.43429448190325176
+  scaleRho: 0.20
+ 
